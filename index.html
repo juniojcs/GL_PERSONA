@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/24dff86c0d.js" crossorigin="anonymous"></script>
+    <script>
+        function exibirHora() {
+          var dataAtual = new Date();
+          var hora = dataAtual.getHours();
+          var minutos = dataAtual.getMinutes();
+          var segundos = dataAtual.getSeconds();
+          
+          var horaFormatada = hora + ":" + minutos + ":" + segundos;
+          
+          document.getElementById("hora-rede").textContent = horaFormatada;
+          
+          setTimeout(exibirHora, 1000); // Atualizar a cada segundo
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>GOOGLE.COM</title>
+</head>
+<body onload="exibirHora()">
+    <div id="container">
+        <header>
+
+        </header>  
+        
+        <section id="principal">
+            <h3>Welcome</h3>
+            <H1>Junio Cesar</H1>
+        </section>
+        
+        <section>
+            <form autocomplete="off" action="https://www.google.com/search" method="GET" target="_blank">
+                <div class="pesquisa">
+                <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
+                <input type="text" name="q" placeholder="Pesquise no Google ou digite um Url">
+                </div>
+            </form>
+        </section>
+
+        <footer >
+            <span id="hora-rede"></span>
+        </footer>
+    </div>
+    </body>
+</html>
